@@ -11,11 +11,13 @@ case "$1" in
         ./etc/init.d/scull_load
         ./etc/init.d/module_load faulty
         ./etc/init.d/module_load hello 
+        ./etc/init.d/module_load aesdchar
         ;;
     stop)
         ./etc/init.d/scull_unload
         ./etc/init.d/module_unload faulty
         ./etc/init.d/module_unload hello 
+        ./etc/init.d/module_unload aesdchar
         ;;
     *)
         echo "Invalid argument. Use 'start' or 'stop'."
