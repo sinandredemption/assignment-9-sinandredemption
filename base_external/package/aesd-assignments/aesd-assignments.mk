@@ -6,7 +6,7 @@
 ##############################################################
 
 #TODO: Fill up the contents below in order to reference your assignment 3 git contents
-AESD_ASSIGNMENTS_VERSION = '9d27d92205cd7ea567e60790606c7e5afa585abf'
+AESD_ASSIGNMENTS_VERSION = '8183794345a5d76acc6184633bce5b89d1fd99ed'
 # Note: Be sure to reference the *ssh* repository URL here (not https) to work properly
 # with ssh keys and the automated build/test system.
 # Your site should start with git@github.com:
@@ -16,7 +16,8 @@ AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 
 define AESD_ASSIGNMENTS_BUILD_CMDS
 	$(TARGET_CC) $(@D)/finder-app/writer.c -o $(@D)/finder-app/writer
-	$(TARGET_CC) $(@D)/server/aesdsocket.c -o $(@D)/server/aesdsocket
+#	$(TARGET_CC) $(@D)/server/aesdsocket.c -o $(@D)/server/aesdsocket
+	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/server
 #	$(MAKE) $(TARGET_CONFIGURE_OPTS) -C $(@D)/finder-app all
 endef
 
